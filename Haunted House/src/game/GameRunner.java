@@ -27,10 +27,18 @@ public class GameRunner {
 
         //House boo = new House(map);
 
-
-        boolean gameOn = true;
-        Person player1 = Utilities.createPerson();
+        
+        
+        //This section is all for initializing the player
         Scanner in = new Scanner(System.in);
+        String statement = "";
+        
+        System.out.println("Hello trick or treater, what is your name?");
+		statement = in.nextLine();
+        
+        Person player1 = Utilities.createPerson(statement);
+        
+        boolean gameOn = true;
         while(gameOn)
         {
             System.out.println("Welcome to the Halls of boo, " + player1.getFirstName());

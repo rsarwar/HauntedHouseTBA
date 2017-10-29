@@ -1,6 +1,6 @@
 package people;
 
-public abstract class Person
+public class Person
 {
 	private String firstName;
 	private String[] inventory;
@@ -8,9 +8,9 @@ public abstract class Person
 	private String costume;
 	
 	
-	public Person()
+	public Person(String firstName)
 	{
-		
+		this.firstName = firstName;
 	}
 	
 	public String getFirstName()
