@@ -1,5 +1,7 @@
 package people;
 
+import rooms.Room;
+
 public class Person
 {
 	private String firstName;
@@ -16,5 +18,10 @@ public class Person
 	public String getFirstName()
 	{
 		return firstName;
+	}
+
+	public void setRoom (Room room) {
+		
+		
 	}
 }

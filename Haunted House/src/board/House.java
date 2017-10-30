@@ -2,7 +2,7 @@ package board;
 
 public class House {
 	
-	public House()
+	public House(String[] map)
 	{
 		
 	}
