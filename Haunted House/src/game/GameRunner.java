@@ -3,6 +3,7 @@ package game;
 import items.Item;
 import rooms.*;
 import people.Person;
+import board.House;
 
 import java.util.Scanner;
 
@@ -20,12 +21,12 @@ public class GameRunner {
                 Person[] people = {};
                 Item[] items = {};
 
-               // row[i] = new Hallway(doors, Person, items, i, j);
+               row[i] = new Hallway(doors, people, items, i, j);
             }
 
         }
 
-        //House boo = new House(map);
+        House boo = new House(map);
 
         
         
@@ -41,14 +42,15 @@ public class GameRunner {
         boolean gameOn = true;
         while(gameOn)
         {
-            System.out.println("Welcome to the Halls of boo, " + player1.getFirstName()+". As you navigate through this house, you need to collect as much candy as you can. Beware of spooky creatures lurking around, though! If they catch you, it's game over! ");
+            System.out.println("Welcome to the Halls of Boo, " + player1.getFirstName()+". As you navigate through this house, you need to collect as much candy as you can. Beware of spooky creatures lurking around, though! If they catch you, it's game over! ");
             map[0][0].addOccupant(player1);
 
-            //boo.printMap();
-            //player1.printRoom();
-           // String move = player1.chooseMove();
-            //Utilities.movePlayer(boo, player1,move);
-            //gameOn = false;
+            boo.printMap();
+            player1.printRoom();
+            System.out.println("Where would you like to move?");
+            String move = player1.chooseMove();
+            //Utilities.movePlayer(boo, player1, move);
+            gameOn = false;
         }
     }
 }

@@ -11,7 +11,7 @@ public abstract class Room {
     private Person[] occupants;
     private Item[] items;
     public boolean explored;
-    private int x, y;
+    public int x, y;
 
     public Room (boolean[] doors, Person[] occupants, Item[] items, int x, int y)
     {

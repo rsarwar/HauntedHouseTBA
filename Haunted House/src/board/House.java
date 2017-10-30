@@ -18,9 +18,11 @@ public class House {
 			System.out.println("");
 			for(int y = 0; y < map.length; y++)
 			{
-				System.out.println("x");
+				System.out.print("[ ]");
 			}
 		}
+		System.out.println("");
+		System.out.println("This is the lovely house. You are at point x.");
 	}
 
 }

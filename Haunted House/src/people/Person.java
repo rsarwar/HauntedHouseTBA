@@ -1,6 +1,7 @@
 package people;
 
 import rooms.Room;
+import java.util.Scanner;
 
 public class Person
 {
@@ -8,6 +9,7 @@ public class Person
 	private String[] inventory;
 	private int scaredMeter;
 	private String costume;
+	private int[] location;
 	
 	
 	public Person(String firstName)
@@ -21,15 +23,30 @@ public class Person
 	}
 
 	public void setRoom (Room room) {
-		
-		
+		/*this.location[0] = room.x;
+		this.location[1] = room.y;*/
 	}
 	
-	public char[] print() {
+	public String print() {
 		
-		return null;
+		return "x";
 	}
-	
+	public void printRoom()
+	{
+
+		System.out.println("");
+		System.out.println("");
+		System.out.println("[               ]");
+		System.out.println("[               ]");
+		System.out.println("This is the current room you're in.");
+	}
+	public String chooseMove()
+	{
+		Scanner in = new Scanner(System.in);
+        String statement = "";
+		statement = in.nextLine();
+		return statement;
+	}
 	/*
 	public String[] setRoom(Person p)
 	{
