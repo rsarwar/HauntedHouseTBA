@@ -24,4 +24,17 @@ public class Person
 		
 		
 	}
+	
+	public char[] print() {
+		
+		return null;
+	}
+	
+	/*
+	public String[] setRoom(Person p)
+	{
+		return this.location = p.location;
+	}
+	*/
+
 }
