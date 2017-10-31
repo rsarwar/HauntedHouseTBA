@@ -36,20 +36,21 @@ public class GameRunner {
         
         System.out.println("Hello trick or treater, what is your name?");
 		statement = in.nextLine();
-        
-        Person player1 = Utilities.createPerson(statement);
+		
+        int[] place = {0,0};
+        Person player1 = Utilities.createPerson(statement,place);
         
         boolean gameOn = true;
         while(gameOn)
         {
             System.out.println("Welcome to the Halls of Boo, " + player1.getFirstName()+". As you navigate through this house, you need to collect as much candy as you can. Beware of spooky creatures lurking around, though! If they catch you, it's game over! ");
-            map[0][0].addOccupant(player1);
+            boo.getMap()[0][0].addOccupant(player1);
 
-            boo.printMap();
+            boo.printMap(player1);
             player1.printRoom();
             System.out.println("Where would you like to move?");
             String move = player1.chooseMove();
-            //Utilities.movePlayer(boo, player1, move);
+            Utilities.movePlayer(boo, player1, move);
             gameOn = false;
         }
     }

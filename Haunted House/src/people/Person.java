@@ -9,22 +9,30 @@ public class Person
 	private String[] inventory;
 	private int scaredMeter;
 	private String costume;
-	private int[] location;
+	private int[] location = new int[2];
 	
 	
-	public Person(String firstName)
+	
+	public Person(String firstName, int[] location)
 	{
 		this.firstName = firstName;
+		this.location = location;
 	}
 	
 	public String getFirstName()
 	{
 		return firstName;
 	}
+	
+	public int[] getLocation()
+	{
+		return location;
+	}
 
 	public void setRoom (Room room) {
-		/*this.location[0] = room.x;
-		this.location[1] = room.y;*/
+		this.location[0] = room.getX();
+		this.location[1] = room.getY();
+		//System.out.println("");
 	}
 	
 	public String print() {
@@ -40,6 +48,7 @@ public class Person
 		System.out.println("[               ]");
 		System.out.println("This is the current room you're in.");
 	}
+	
 	public String chooseMove()
 	{
 		Scanner in = new Scanner(System.in);
