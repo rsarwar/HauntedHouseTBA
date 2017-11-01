@@ -17,6 +17,7 @@ public class Utilities {
 	public static void movePlayer(House boo, Person player, String move)
 	{
 		//player.getLocation() 
+		
 	}
 
 }
