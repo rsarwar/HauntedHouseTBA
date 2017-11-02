@@ -6,7 +6,6 @@ import people.Person;
 public class House {
 	
 	private Room[][] map;
-	private int[] map2 = new int[2];
 	
 	public House(Room[][] map)
 	{
@@ -15,25 +14,27 @@ public class House {
 	
 	public void printMap(Person player1)
 	{
+		
 		for(int x = 0; x < map.length; x++)
 		{
 			System.out.println("");
 			for(int y = 0; y < map.length; y++)
 			{
-				map2[0]=x;
-				map2[1]=y;
-				if(player1.getLocation()== map2)
+				
+				if(player1.getLocation()[0]==x && player1.getLocation()[1]==y)
 				{
 					System.out.print("[x]");
 				}
-				System.out.print("[ ]");
+				else
+					{
+					System.out.print("[ ]");
+					}
 		
 			}
 		}
 		System.out.println("");
 		System.out.println("This is the lovely house. You are at point x.");
-		System.out.println(player1.getLocation());
-		System.out.println(map2[1]);
+		//toString();
 	}
 
 	public Room[][] getMap() {

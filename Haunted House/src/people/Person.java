@@ -9,7 +9,7 @@ public class Person
 	private String[] inventory;
 	private int scaredMeter;
 	private String costume;
-	private int[] location = new int[2];
+	public int[] location = new int[2];
 	
 	
 	

@@ -16,7 +16,20 @@ public class Utilities {
 	
 	public static void movePlayer(House boo, Person player, String move)
 	{
-		//player.getLocation() 
+		int[] x = player.getLocation();
+		
+		if(move.equals("N"))
+		{
+			x[1] = x[1] - 1;
+			player.location = x;
+		}
+		
+		if(move.equals("S"))
+		{
+			x[1] = x[1] + 1;
+			player.location = x;
+		}
+		
 		
 	}
 
