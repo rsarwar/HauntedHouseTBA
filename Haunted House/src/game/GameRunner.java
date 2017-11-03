@@ -45,7 +45,7 @@ public class GameRunner {
         System.out.println("Welcome to the Halls of Boo, " + player1.getFirstName()+". As you navigate through this house, you need to collect as much candy as you can. Beware of spooky creatures lurking around, though! If they catch you, it's game over! ");
         boo.getMap()[0][0].addOccupant(player1);
         boolean gameOn = true;
-        
+        System.out.println("This is the lovely house. You are at point x.");
         while(gameOn)
         {
             boo.printMap(player1/*, monster1*/);
