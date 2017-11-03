@@ -35,6 +35,9 @@ public class House {
 		System.out.println("");
 		System.out.println("This is the lovely house. You are at point x.");
 		//toString();
+		
+		//System.out.println(player1.location[0]);
+		//System.out.println(player1.location[1]);
 	}
 
 	public Room[][] getMap() {

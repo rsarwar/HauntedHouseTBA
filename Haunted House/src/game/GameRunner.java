@@ -40,15 +40,14 @@ public class GameRunner {
         int[] place = {0,0};
         Person player1 = Utilities.createPerson(statement,place);
         System.out.println("Welcome to the Halls of Boo, " + player1.getFirstName()+". As you navigate through this house, you need to collect as much candy as you can. Beware of spooky creatures lurking around, though! If they catch you, it's game over! ");
+        boo.getMap()[0][0].addOccupant(player1);
         boolean gameOn = true;
+        
         while(gameOn)
         {
-      
-            boo.getMap()[0][0].addOccupant(player1);
-
             boo.printMap(player1);
             player1.printRoom();
-            System.out.println("Where would you like to move?");
+            System.out.println("Where would you like to move? Type N, S, W, or E.");
             String move = player1.chooseMove();
             Utilities.movePlayer(boo, player1, move);
             //gameOn = false;
