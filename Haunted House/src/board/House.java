@@ -14,7 +14,7 @@ public class House {
 		this.map = map;
 	}
 	
-	public void printMap(Person player1, Monster monster)
+	public void printMap(Person player1/*, Monster monster*/)
 	{
 		
 		for(int x = 0; x < map.length; x++)
