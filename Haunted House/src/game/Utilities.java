@@ -3,6 +3,7 @@ package game;
 import java.util.Scanner;
 import people.Person; 
 import board.House;
+import people.Monster;
 
 public class Utilities {
 	
@@ -13,7 +14,10 @@ public class Utilities {
 		return new Person(fname, location);
 		
 	}
-	
+	public static Monster createMonster(String type, int[] location)
+	{
+		return new Monster(type, location);
+	}
 	public static void movePlayer(House boo, Person player, String move)
 	{
 		int[] x = player.getLocation();

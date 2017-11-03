@@ -2,6 +2,8 @@ package board;
 
 import rooms.Room;
 import people.Person;
+import people.Monster;
+import java.util.Random;
 
 public class House {
 	
@@ -12,7 +14,7 @@ public class House {
 		this.map = map;
 	}
 	
-	public void printMap(Person player1)
+	public void printMap(Person player1, Monster monster)
 	{
 		
 		for(int x = 0; x < map.length; x++)

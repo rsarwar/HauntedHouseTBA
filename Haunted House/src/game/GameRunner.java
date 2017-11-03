@@ -3,6 +3,7 @@ package game;
 import items.Item;
 import rooms.*;
 import people.Person;
+import people.Monster;
 import board.House;
 
 import java.util.Scanner;
@@ -39,13 +40,15 @@ public class GameRunner {
 		
         int[] place = {0,0};
         Person player1 = Utilities.createPerson(statement,place);
+        //Monster monster = Utilities.createMonster();
+        
         System.out.println("Welcome to the Halls of Boo, " + player1.getFirstName()+". As you navigate through this house, you need to collect as much candy as you can. Beware of spooky creatures lurking around, though! If they catch you, it's game over! ");
         boo.getMap()[0][0].addOccupant(player1);
         boolean gameOn = true;
         
         while(gameOn)
         {
-            boo.printMap(player1);
+            boo.printMap(player1, monster);
             player1.printRoom();
             System.out.println("Where would you like to move? Type N, S, W, or E.");
             String move = player1.chooseMove();
