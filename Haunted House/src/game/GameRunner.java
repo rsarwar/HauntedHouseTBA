@@ -48,10 +48,11 @@ public class GameRunner {
         System.out.println("This is the lovely house. You are at point x.");
         while(gameOn)
         {
-            boo.printMap(player1/*, monster1*/);
+            boo.printMap(player1);
             player1.printRoom();
             System.out.println("Where would you like to move? Type N, S, W, or E.");
             String move = player1.chooseMove();
+            //Monster monster1 = Utilities.createMonster();
             Utilities.movePlayer(boo, player1, move);
             //gameOn = false;
         }

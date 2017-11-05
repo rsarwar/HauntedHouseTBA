@@ -22,7 +22,7 @@ public class Utilities {
 	{
 		int[] x = player.getLocation();
 		
-		if(move.equals("W"))
+		if(move.toLowerCase().equals("w"))
 		{
 			x[1] = x[1] - 1;
 			if(x[1] > 3 || x[1] <0)
@@ -36,7 +36,7 @@ public class Utilities {
 			
 		}
 		
-		if(move.equals("N"))
+		if(move.toLowerCase().equals("n"))
 		{
 			x[0] = x[0] - 1;
 			if(x[0] > 3 || x[0] <0)
@@ -50,7 +50,7 @@ public class Utilities {
 			}
 		}
 		
-		if(move.equals("S"))
+		if(move.toLowerCase().equals("s"))
 		{
 			x[0] = x[0] + 1;
 			if(x[0] > 3 || x[0] <0)
@@ -64,7 +64,7 @@ public class Utilities {
 			}
 		}
 		
-		if(move.equals("E"))
+		if(move.toLowerCase().equals("e"))
 		{
 			x[1] = x[1] + 1;
 			if(x[1] > 3 || x[1] <0)
