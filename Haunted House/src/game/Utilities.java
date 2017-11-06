@@ -5,6 +5,9 @@ import people.Person;
 import board.House;
 import people.Monster;
 
+import java.awt.Window.Type;
+import java.util.Random;
+
 public class Utilities {
 	
 	public static Person createPerson(String fname, int[] location)
@@ -79,6 +82,37 @@ public class Utilities {
 		}
 		//System.out.println(player.location[0]);
 		//System.out.println(player.location[1]);
+		
+	}
+	
+	public static Monster generateMonster()
+	{
+		double generate = Math.random();
+		String[] types = {"zombie","ghoul","banshee"};
+		String type = types[(int)Math.random()];
+		int[] location = new int[2];
+		
+		if(generate > 0.6)
+		{
+			if(type.toLowerCase() == "zombie")
+			{
+				location[0] = 3;
+			}
+			
+			if(type.toLowerCase() == "banshee")
+			{
+				location[0] = 1;
+			}
+			
+			if(type.toLowerCase() == "ghoul")
+			{
+				location[0] = 0;
+			}
+		}
+		
+		location[1] = (int)Math.random()*4;
+		
+		return new Monster(type, location);
 		
 	}
 

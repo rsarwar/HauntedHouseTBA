@@ -14,7 +14,7 @@ public class House {
 		this.map = map;
 	}
 	
-	public void printMap(Person player1/*, Monster monster*/)
+	public void printMap(Person player1, Monster monster)
 	{
 		
 		for(int x = 0; x < map.length; x++)
@@ -27,10 +27,18 @@ public class House {
 				{
 					System.out.print("[x]");
 				}
-				else
+				else if(monster.getLocation()[0]==x && monster.getLocation()[1]==y)
 					{
-					System.out.print("[ ]");
+					System.out.print("[m]");
 					}
+						else if(monster.getLocation()[0]==x && monster.getLocation()[1]==y && player1.getLocation()[0]==x && player1.getLocation()[1]==y)
+						{
+							System.out.print("[x m]");
+						}
+						else
+						{
+							System.out.print("[ ]");
+						}
 		
 			}
 		}
